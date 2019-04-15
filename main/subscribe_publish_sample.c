@@ -308,9 +308,8 @@ void aws_iot_task(void *param) {
     xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
                         false, true, portMAX_DELAY);
 
-    int jk = 1;
     connectParams.keepAliveIntervalInSec = 10;
-    connectParams.isCleanSession = false;
+    connectParams.isCleanSession = true;
     connectParams.MQTTVersion = MQTT_3_1_1;
     /* Client ID is set in the menuconfig of the example */
     connectParams.pClientID = CONFIG_AWS_EXAMPLE_CLIENT_ID;
