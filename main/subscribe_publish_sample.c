@@ -299,6 +299,8 @@ void aws_iot_task(void *param) {
     }
 #endif
 
+    int nwerl = 0;
+
     rc = aws_iot_mqtt_init(&client, &mqttInitParams);
     if(SUCCESS != rc) {
         ESP_LOGE(TAG, "aws_iot_mqtt_init returned error : %d ", rc);
