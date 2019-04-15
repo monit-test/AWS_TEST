@@ -305,6 +305,8 @@ void aws_iot_task(void *param) {
         abort();
     }
 
+    int hi = 1024;
+
     xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
                         false, true, portMAX_DELAY);
 
